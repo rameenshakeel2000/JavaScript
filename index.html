@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <link href="F:\OFFICE\JavaScript\css\styles.css" ref="stylesheet">
+    <script>
+        function add() {
+    var formLength = document.getElementById("myForm").elements.length;
+    var x = document.createElement("INPUT");
+    x.setAttribute("id" , "number"+formLength)
+    x.setAttribute("name", "n");
+    x.setAttribute("type", "number");
+    x.setAttribute("placeholder", "Enter number");
+    document.getElementById("myForm").appendChild(x);
+    console.log("formLength", formLength);
+}{
+    console.log("formLength");
+}
+    function getValues(){
+        var formLength = document.getElementById("myForm").elements.length;
+        var FormData = [];
+        for(i=0; i<=formLength; i++){
+        var values = document.getElementById("number"+i).value;
+        FormData.push(values);
+        alert(values);
+        }
+    }
+    function sumOfValues(){
+        var formLength = document.getElementById("myForm").elements.length;
+        let arr = document.getElementsByName("n");
+        let sum = 0;
+        for(let i=0; i<arr.length; i++){
+            if(parseInt(arr[i].value))
+            sum += parseInt(arr[i].value);
+        }
+        alert("sum is: "+ sum);
+    }
+   function calAvg(){
+    var formLength = document.getElementById("myForm").elements.length;
+        let arr = document.getElementsByName("n");
+        let sum = 0;
+        let avg = 0;
+        for(let i=0; i<arr.length; i++){
+            if(parseInt(arr[i].value))
+            sum += parseInt(arr[i].value);
+            avg = sum/formLength;
+        }
+        alert("average is: " + avg);
+   }
+
+    </script> 
+</head>
+<body>
+    <button id="btn" onclick="add()">Add Number</button>
+    <button id="btn" onclick="getValues()">Values</button>
+    <button id="btn" onclick="sumOfValues()">Sum</button>
+    <button id="btn" onclick="calAvg()">Average</button>
+    <form id="myForm">
+</form>
+</body>  
+</html>

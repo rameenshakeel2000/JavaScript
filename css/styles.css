@@ -1,0 +1,39 @@
+input[type="text"], input[type="number"] {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -web-kit-border-radius:4px;
+    -khtml-border-radius:4px;
+}
+input[type="text"]:focus, input[type="number"]:focus {
+    border: 1px solid #1CCDE8;
+    outline: none;
+}
+input[type="submit"]:not(.removeInput), input[type="button"]:not(.removeInput) {
+    display: block;
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -web-kit-border-radius:4px;
+    -khtml-border-radius:4px;
+    outline: none;
+}
+input[type="submit"].removeInput, input[type="button"].removeInput {
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+    color: #999;
+}
+input[type="submit"]:not(.removeInput):hover, input[type="button"]:not(.removeInput):hover {
+    background-color: #1CCDE8;
+    color: white;
+}
+form p {
+    margin: 0;
+}
